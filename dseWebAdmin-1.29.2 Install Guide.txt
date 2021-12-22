@@ -1,0 +1,20 @@
+DSE Log4j Advisory NoticeDSE Log4j Advisory
+
+Background
+The Apache Log4j 2 utility is an open source Apache framework that is a commonly used for logging various application data. 
+On December 9, 2021, a vulnerability was reported that could allow a system running Apache Log4j version 2.14.1 or below to 
+be compromised and allow an attacker to execute arbitrary code on the vulnerable server. On December 10th, 2021, NIST published 
+a critical CVE in the National Vulnerability Database identifying this as CVE-2021-44228. Additional Log4j vulnerabilities have 
+been identified in CVE-2021-45105 and CVE-2021-4104.
+
+
+Technical Details
+To mitigate the Log4j vulnerabilities, the Log4j libraries contained in the DSE war file were updated to Log4j 2.17 in DSE release 1.29.2.
+Note: Java 8 is required to install DSE Release 1.29.2 as the Log4j 2.17 libraries require Java 8.
+
+To install: 
+1. Stop Tomcat
+2. Remove/backup the existing dseWebadmin folder from the {​​​​​​​​​Tomcat_Home}​​​​​​​​​\webapps directory.  
+3. Deploy the dseWebAdmin-1.29.2.war to Tomcat.
+4. Start Tomcat.
+5. Confirm the deployment by launching the dseWebAdmin URL, version 1.29.2 should be displayed in the Spring Batch Admin heading.
